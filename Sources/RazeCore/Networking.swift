@@ -26,28 +26,10 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import RazeCore
+import Foundation
 
-final class RazeCoreTests: XCTestCase {  
-  func testColorRedEqual() {
-    let color = RazeCore.colorFromHexString("FF0000")
-    XCTAssertEqual(color, .red)
+extension RazeCore {
+  public class Networking {
+    
   }
-  
-  func testRazeColorsAreEqual() {
-    let color = RazeCore.colorFromHexString("006736")
-    XCTAssertEqual(color, RazeCore.razeColor)
-  }
-  
-  func testSecondaryRazeColorsAreEqual() {
-    let color = RazeCore.colorFromHexString("FCFFFD")
-    XCTAssertEqual(color, RazeCore.secondaryRazeColor)
-  }
-
-  static var allTests = [
-    ("testColorRedEqual", testColorRedEqual),
-    ("testRazeColorsAreEqual", testRazeColorsAreEqual),
-    ("testSecondaryRazeColorsAreEqual", testSecondaryRazeColorsAreEqual)
-  ]
 }
